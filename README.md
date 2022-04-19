@@ -2,7 +2,7 @@
 
 1. Build the jar file
 
-`./gradle build`
+`./gradlew build`
 
 2. Go the directory build/libs
 
@@ -10,7 +10,7 @@
 
 3. Download the elastic APM agent at https://mvnrepository.com/artifact/co.elastic.apm/elastic-apm-agent/1.30.1 and move to build/libs
 
-4. Create a elasticapm.properties at build/libs
+4. Create a file elasticapm.properties at build/libs with the content:
 ```
 enable=true
 environment=Local
@@ -18,7 +18,7 @@ service_name=elk-spring-boot-demo
 application_packages=com.example.demo
 server_url=http://localhost:8200
 capture_body=all
-transaction_sample_rate=0.2
+transaction_sample_rate=1
 metrics_interval=5m
 ```
 
