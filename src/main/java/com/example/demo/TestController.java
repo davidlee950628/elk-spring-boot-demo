@@ -12,12 +12,12 @@ public class TestController {
     @PostMapping(value = "/test-string-request-body")
     public @ResponseBody
     ResponseEntity<Object> testStringRequestBody(@RequestBody String requestBody) {
-        throw new IllegalStateException("test exception");
+        throw new IllegalStateException("test string request body exception");
     }
 
     @PostMapping(value = "/test-object-request-body")
     public @ResponseBody
     ResponseEntity<Object> testStringRequestBody(@RequestBody TestModel requestBody) {
-        throw new IllegalStateException("test exception");
+        throw new RuntimeException("test object request body exception");
     }
 }
